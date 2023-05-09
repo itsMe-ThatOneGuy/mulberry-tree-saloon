@@ -1,3 +1,5 @@
+import { MapPin, Mail, Clock, Phone, Facebook } from "react-feather";
+
 const Info = () => {
 	return (
 		<section id="info">
@@ -18,10 +20,95 @@ const Info = () => {
 				</div>
 
 				{/* contact info */}
-				<div></div>
+				<div>
+					<div>
+						<MapPin />
+						<p>Location :</p>
+					</div>
+					<div>
+						<p>
+							610 State Hwy 265
+							<br />
+							Marionville, MO 65705
+						</p>
+					</div>
 
-				{/* hours */}
-				<div></div>
+					<div>
+						<Phone />
+						<p>Phone :</p>
+					</div>
+					<div>
+						<p>(417) 366-9857</p>
+					</div>
+
+					<div>
+						<Mail />
+						<p>Email :</p>
+					</div>
+					<div>
+						<p>MulberryMail@yahoo.com</p>
+					</div>
+
+					<div>
+						<Clock />
+						<p>Hours of Operation :</p>
+					</div>
+					<div>
+						<p>Sun</p>
+					</div>
+					<div>
+						<p>12:00 PM - 8:00 PM</p>
+					</div>
+					<div>
+						<p>Mon</p>
+					</div>
+					<div>
+						<p>Closed</p>
+					</div>
+					<div>
+						<p>Tues</p>
+					</div>
+					<div>
+						<p>4:00 PM - 12:00 AM</p>
+					</div>
+					<div>
+						<p>Wed</p>
+					</div>
+					<div>
+						<p>4:00 PM - 12:00 AM</p>
+					</div>
+					<div>
+						<p>Thurs</p>
+					</div>
+					<div>
+						<p>4:00 PM - 12:00 AM</p>
+					</div>
+					<div>
+						<p>Fri</p>
+					</div>
+					<div>
+						<p>4:00 PM - 12:00 AM</p>
+					</div>
+					<div>
+						<p>Sat</p>
+					</div>
+					<div>
+						<p>4:00 PM - 12:00 AM</p>
+					</div>
+				</div>
+
+				<div>
+					<p>Visit our Facebook page for all upcoming Events!</p>
+				</div>
+				<div>
+					<a
+						href="https://www.facebook.com/profile.php?id=100057060955346"
+						target="_blank">
+						<button>
+							<Facebook />
+						</button>
+					</a>
+				</div>
 			</div>
 		</section>
 	);
