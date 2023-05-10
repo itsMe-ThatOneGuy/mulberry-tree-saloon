@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Header = () => {
 	return (
 		<header>
@@ -8,7 +6,7 @@ const Header = () => {
 			<nav className="navigation">
 				<ul>
 					<li>
-						<a>Our Story</a>
+						<a>About</a>
 					</li>
 					<li>
 						<a>Menu</a>
