@@ -2,12 +2,14 @@ import MenuItem from "./MenuItem";
 
 const Menu = () => {
 	return (
-		<section>
+		<section id="menu">
 			<div>
-				<h2>Menu</h2>
-			</div>
-			<div>
-				<MenuItem />
+				<div>
+					<h2>Menu</h2>
+				</div>
+				<div>
+					<MenuItem />
+				</div>
 			</div>
 		</section>
 	);
