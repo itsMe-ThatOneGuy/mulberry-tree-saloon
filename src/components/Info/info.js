@@ -4,21 +4,19 @@ const Info = () => {
 	return (
 		<section id="info">
 			<div className="w-full md:h-screen">
-				<div className="bg-[#222] py-4 md:py-0">
+				<div className="bg-[#222] py-4 md:py-10">
 					<h2>Information</h2>
 
-					<div className="max-w-screen-lg w-full grid sm:grid-cols-2 gap-h mx-auto px-4 text-white">
+					<div className="max-w-screen-lg w-full grid sm:grid-cols-2 gap-4 mx-auto px-4 text-white">
 						{/* Google maps image*/}
 						<div className="flex justify-center items-center">
 							<iframe
 								title="test"
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6373.141844684716!2d-93.63045578181291!3d36.99617396565907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf4eda7f665649%3A0xbeb42b2f2611bf8e!2s610%20State%20Hwy%20265%2C%20Marionville%2C%20MO%2065705!5e0!3m2!1sen!2sus!4v1683601716692!5m2!1sen!2sus"
-								width="544"
-								height="492"
 								allowfullscreen=""
 								loading="lazy"
 								referrerpolicy="no-referrer-when-downgrade"
-								className="mr-4 drop-shadow-md"></iframe>
+								className="mr-4 drop-shadow-md md:w-[544px] md:h-[492px]"></iframe>
 						</div>
 
 						{/* contact info */}
@@ -119,22 +117,21 @@ const Info = () => {
 								<p>4:00 PM - 12:00 AM</p>
 							</div>
 						</div>
-
-						<div>
-							<p>
-								Visit our Facebook page for all upcoming Events!
-							</p>
-						</div>
-						<div>
-							<a
-								href="https://www.facebook.com/profile.php?id=100057060955346"
-								target="_blank"
-								rel="noreferrer">
-								<button>
-									<Facebook />
-								</button>
-							</a>
-						</div>
+					</div>
+					<div className="pt-10">
+						<p className="mb-8 text-white text-center">
+							Visit our Facebook page for all upcoming Events!
+						</p>
+					</div>
+					<div className="w-full mx-auto mt-10 flex justify-center items-center">
+						<a
+							href="https://www.facebook.com/profile.php?id=100057060955346"
+							target="_blank"
+							rel="noreferrer">
+							<button className="mx-4 w-[50px] h-[50px] inline-flex justify-center items-center rounded-full bg-[#fe4039] hover:bg-white text-white hover:text-[#fe4039]">
+								<Facebook size={30} />
+							</button>
+						</a>
 					</div>
 				</div>
 			</div>
