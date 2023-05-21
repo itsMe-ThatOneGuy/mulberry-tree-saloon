@@ -70,7 +70,7 @@ const Info = () => {
 									className="mr-3"
 								/>
 								<p className="font-medium uppercase">
-									Hours of Operation :
+									Hours of Operation:
 								</p>
 							</div>
 							<div></div>
