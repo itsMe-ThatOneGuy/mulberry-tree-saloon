@@ -1,5 +1,5 @@
 import { Menu, X } from "react-feather";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Header = () => {
 	const [mobileMenu, setMobileMenu] = useState(false);
