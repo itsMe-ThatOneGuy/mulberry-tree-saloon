@@ -26,11 +26,11 @@
 	}
 
 	.navigation .mobile-menu {
-		@apply absolute left-[50vh] top-[70px] w-full flex flex-col justify-center items-center bg-[#1b1b1b] transition-all ease-in duration-700;
+		@apply absolute left-[50vh] top-[70px] w-full flex flex-col justify-center items-center bg-[#1b1b1b] transition-all ease-in-out duration-500;
 	}
 
 	.navigation .mobile-menu.active {
-		@apply top-[70px] left-0 hover:text-[#fe4039];
+		@apply top-[70px] left-0;
 	}
 
 	header.hidden {
