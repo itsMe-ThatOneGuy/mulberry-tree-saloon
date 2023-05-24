@@ -3,7 +3,7 @@ import { Facebook } from "react-feather";
 const Footer = () => {
 	return (
 		<footer>
-			<div className="realitive z-50 bottom-0 left-0 w-full flex justify-between items-center p-3 bg-[#1b1b1b] border-t border-gray-300 text-white">
+			<div className="relative z-50 bottom-0 left-0 w-full flex justify-between items-center p-3 bg-[#1b1b1b] border-t border-gray-300 text-white">
 				<div className="logo">MTS</div>
 
 				<div className="text-xs md:text-base font-normal tracking-wider">
