@@ -6,7 +6,7 @@ const About = () => {
 					<div className="max-w-screen-lg w-full px-4 mx-auto text-white">
 						<h2>- Our Story -</h2>
 
-						<div className="max-w-scree-lg w-full mx-auto text-white px-4">
+						<div className="max-w-screen-lg w-full mx-auto text-white px-4">
 							<p className="pb-2">
 								Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit, sed do eiusmod tempor
