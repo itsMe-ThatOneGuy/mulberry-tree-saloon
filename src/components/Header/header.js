@@ -14,7 +14,7 @@ const Header = () => {
 	};
 
 	return (
-		<header className="sticky top-0 z-50">
+		<header className="sticky top-0 z-50 overflow-x-hidden">
 			<div className="w-full flex justify-between items-center px-4 md:px-8 py-4 bg-[#1b1b1b] border-b border-gray-300 text-white">
 				<div className="logo">
 					<a
