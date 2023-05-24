@@ -2,8 +2,8 @@ const About = () => {
 	return (
 		<section id="about">
 			<div className="w-full h-full">
-				<div className="bg-[#222] py-4 md:py-10">
-					<div className="max-w-screen-lg w-full px-4 mx-auto text-white">
+				<div className=" bg-[#222] py-4 md:py-10">
+					<div className="w-full h-screen px-4 mx-auto text-white">
 						<h2>- Our Story -</h2>
 
 						<div className="max-w-screen-lg w-full mx-auto text-white px-4">
