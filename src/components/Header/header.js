@@ -4,8 +4,16 @@ import { useState } from 'react';
 const Header = () => {
 	const [mobileMenu, setMobileMenu] = useState(false);
 
+	const body = document.querySelector('body');
+	const toggleBodyOverflow = () => {
+		!mobileMenu
+			? body.classList.add('active')
+			: body.classList.remove('active');
+	};
+
 	const toggleMobileMenu = () => {
 		setMobileMenu(!mobileMenu);
+		toggleBodyOverflow();
 	};
 
 	const handleClick = () => {
@@ -13,9 +21,12 @@ const Header = () => {
 	};
 	return (
 		<header className="fixed top-0 left-0">
-			<div className="fixed flex w-full bg-gray-600 items-center justify-between border-b border-black px-4 py-4 z-50">
+			<div className="fixed flex w-full bg-gray-600 items-center justify-between border-b border-black px-6 py-4 z-50">
 				<div>
-					<a className="text-3xl font-semibold" href="/">
+					<a
+						className="text-3xl font-semibold text-white hover:text-black"
+						href="/"
+					>
 						MTS
 					</a>
 				</div>
@@ -40,16 +51,17 @@ const Header = () => {
 					onClick={() => {
 						handleClick();
 					}}
-					className="md:hidden"
+					className="text-white hover:text-black cursor-pointer md:hidden"
 				>
 					{!mobileMenu ? <Menu /> : <X />}
 				</div>
 			</div>
 
 			<div className={!mobileMenu ? 'mobile-nav' : 'mobile-nav active'}>
-				<ul className="relative flex-col items-center top-1/3 text-center uppercase">
+				<ul className="relative flex-col items-center top-1/3 text-center uppercase text-white">
 					<li className="block pb-14">
 						<a
+							className="hover:text-black"
 							onClick={() => {
 								handleClick();
 							}}
@@ -60,6 +72,7 @@ const Header = () => {
 					</li>
 					<li className="block pb-14">
 						<a
+							className="hover:text-black"
 							onClick={() => {
 								handleClick();
 							}}
@@ -70,6 +83,7 @@ const Header = () => {
 					</li>
 					<li className="block pb-14">
 						<a
+							className="hover:text-black"
 							onClick={() => {
 								handleClick();
 							}}
