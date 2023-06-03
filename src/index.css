@@ -6,4 +6,11 @@
 }
 
 @layer components {
+	.mobile-nav {
+		@apply fixed block w-full h-0 top-0 left-0 bg-gray-600 bg-opacity-90 text-3xl text-black overflow-y-hidden transition-all ease-in-out duration-500 md:hidden;
+	}
+
+	.mobile-nav.active {
+		@apply h-screen;
+	}
 }
