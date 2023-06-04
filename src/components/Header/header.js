@@ -23,25 +23,37 @@ const Header = () => {
 		<header className="fixed top-0 left-0 z-40">
 			<div className="fixed flex w-full bg-[#222] items-center justify-between border-b border-black px-6 py-4 z-50">
 				<div>
-					<a
-						className="text-3xl font-semibold text-white hover:text-red-600"
-						href="/"
-					>
-						M<span className="text-green-600">T</span>S
+					<a className="text-3xl font-semibold text-white" href="/">
+						M<span className="text-green-600 hover:text-red-600">T</span>S
 					</a>
 				</div>
 
 				<div>
 					<nav>
-						<ul className="hidden">
+						<ul className="hidden md:flex">
 							<li>
-								<a href="#about">About</a>
+								<a
+									className="text-2xl hover:text-green-600 text-white mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
+									href="#about"
+								>
+									About
+								</a>
 							</li>
 							<li>
-								<a href="#menu">Menu</a>
+								<a
+									className="text-2xl hover:text-green-600 text-white mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
+									href="#menu"
+								>
+									Menu
+								</a>
 							</li>
 							<li>
-								<a href="#info">Info</a>
+								<a
+									className="text-2xl hover:text-green-600 text-white mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
+									href="#info"
+								>
+									Info
+								</a>
 							</li>
 						</ul>
 					</nav>
@@ -51,9 +63,13 @@ const Header = () => {
 					onClick={() => {
 						handleClick();
 					}}
-					className="text-white hover:text-red-600 cursor-pointer md:hidden"
+					className="text-white cursor-pointer md:hidden"
 				>
-					{!mobileMenu ? <Menu /> : <X />}
+					{!mobileMenu ? (
+						<Menu className="hover:text-green-600" />
+					) : (
+						<X className="hover:text-red-600" />
+					)}
 				</div>
 			</div>
 
