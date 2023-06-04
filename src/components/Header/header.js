@@ -23,8 +23,11 @@ const Header = () => {
 		<header className="fixed top-0 left-0 z-40">
 			<div className="fixed flex w-full bg-[#222] items-center justify-between border-b border-black px-6 py-4 z-50">
 				<div>
-					<a className="text-3xl font-semibold text-white" href="/">
-						M<span className="text-green-600 hover:text-red-600">T</span>S
+					<a
+						className="text-3xl font-semibold text-white hover:text-green-600 transition-all ease-in duration-300"
+						href="/"
+					>
+						M<span className="text-green-600">T</span>S
 					</a>
 				</div>
 
@@ -66,9 +69,9 @@ const Header = () => {
 					className="text-white cursor-pointer md:hidden"
 				>
 					{!mobileMenu ? (
-						<Menu className="hover:text-green-600" />
+						<Menu className="hover:text-green-600 transition-all ease-in-out duration-300" />
 					) : (
-						<X className="hover:text-red-600" />
+						<X className="hover:text-green-600 transition-all ease-in-out duration-300" />
 					)}
 				</div>
 			</div>
@@ -77,7 +80,7 @@ const Header = () => {
 				<ul className="relative flex-col items-center top-1/3 text-center uppercase text-white">
 					<li className="block pb-14">
 						<a
-							className="hover:text-red-600"
+							className="hover:text-green-600 transition-all ease-in-out duration-300"
 							onClick={() => {
 								handleClick();
 							}}
@@ -88,7 +91,7 @@ const Header = () => {
 					</li>
 					<li className="block pb-14">
 						<a
-							className="hover:text-red-600"
+							className="hover:text-green-600 transition-all ease-in-out duration-300"
 							onClick={() => {
 								handleClick();
 							}}
@@ -99,7 +102,7 @@ const Header = () => {
 					</li>
 					<li className="block pb-14">
 						<a
-							className="hover:text-red-600"
+							className="hover:text-green-600 transition-all ease-in-out duration-300"
 							onClick={() => {
 								handleClick();
 							}}
