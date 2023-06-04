@@ -20,11 +20,11 @@ const Header = () => {
 		toggleMobileMenu();
 	};
 	return (
-		<header className="fixed top-0 left-0">
+		<header className="fixed top-0 left-0 z-40">
 			<div className="fixed flex w-full bg-gray-600 items-center justify-between border-b border-black px-6 py-4 z-50">
 				<div>
 					<a
-						className="text-3xl font-semibold text-white hover:text-black"
+						className="text-3xl font-semibold text-white hover:text-red-600"
 						href="/"
 					>
 						MTS
@@ -51,7 +51,7 @@ const Header = () => {
 					onClick={() => {
 						handleClick();
 					}}
-					className="text-white hover:text-black cursor-pointer md:hidden"
+					className="text-white hover:text-red-600 cursor-pointer md:hidden"
 				>
 					{!mobileMenu ? <Menu /> : <X />}
 				</div>
@@ -61,7 +61,7 @@ const Header = () => {
 				<ul className="relative flex-col items-center top-1/3 text-center uppercase text-white">
 					<li className="block pb-14">
 						<a
-							className="hover:text-black"
+							className="hover:text-red-600"
 							onClick={() => {
 								handleClick();
 							}}
@@ -72,7 +72,7 @@ const Header = () => {
 					</li>
 					<li className="block pb-14">
 						<a
-							className="hover:text-black"
+							className="hover:text-red-600"
 							onClick={() => {
 								handleClick();
 							}}
@@ -83,7 +83,7 @@ const Header = () => {
 					</li>
 					<li className="block pb-14">
 						<a
-							className="hover:text-black"
+							className="hover:text-red-600"
 							onClick={() => {
 								handleClick();
 							}}
