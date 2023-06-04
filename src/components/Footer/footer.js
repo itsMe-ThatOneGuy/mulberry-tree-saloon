@@ -3,11 +3,16 @@ import { Facebook } from 'react-feather';
 const Footer = () => {
 	return (
 		<footer>
-			<div className="relative bg-green-500 w-full flex justify-between py-3 text-white items-center">
-				<div className="ml-7">MTS</div>
+			<div className="relative bg-[#222] w-full flex justify-between py-3 text-white items-center font-medium">
+				<div className="ml-7">
+					M<span className="text-green-500">T</span>S
+				</div>
 
 				<div className="flex flex-col items-center">
-					<p>© {new Date().getFullYear()} &middot; Mulberry Tree Saloon.</p>
+					<p>
+						© {new Date().getFullYear()} &middot; Mulberry{' '}
+						<span className="text-green-500">Tree</span> Saloon.
+					</p>
 					<p>All rights reserved.</p>
 				</div>
 
@@ -17,8 +22,8 @@ const Footer = () => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<button className="mr-7">
-							<Facebook size={20} />
+						<button className="mr-7 hover:text-blue-600">
+							<Facebook size={25} />
 						</button>
 					</a>
 				</div>
