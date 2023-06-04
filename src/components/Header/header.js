@@ -21,13 +21,13 @@ const Header = () => {
 	};
 	return (
 		<header className="fixed top-0 left-0 z-40">
-			<div className="fixed flex w-full bg-gray-600 items-center justify-between border-b border-black px-6 py-4 z-50">
+			<div className="fixed flex w-full bg-[#222] items-center justify-between border-b border-black px-6 py-4 z-50">
 				<div>
 					<a
 						className="text-3xl font-semibold text-white hover:text-red-600"
 						href="/"
 					>
-						MTS
+						M<span className="text-green-600">T</span>S
 					</a>
 				</div>
 
