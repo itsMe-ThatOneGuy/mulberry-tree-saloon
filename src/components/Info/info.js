@@ -45,7 +45,9 @@ const Info = () => {
 										<p className="pl-2">Phone :</p>
 									</div>
 									<div>
-										<p>(417) 366-9857</p>
+										<a className="underline" href="tel:4173669857">
+											(417) 366-9857
+										</a>
 									</div>
 								</div>
 
@@ -55,7 +57,12 @@ const Info = () => {
 										<p className="pl-2">Email :</p>
 									</div>
 									<div>
-										<p>MulberryMail@yahoo.com</p>
+										<a
+											className="underline"
+											href="mailto:MulberryMail@yahoo.com"
+										>
+											MulberryMail@yahoo.com
+										</a>
 									</div>
 								</div>
 
