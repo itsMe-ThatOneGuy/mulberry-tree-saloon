@@ -63,35 +63,49 @@ const Info = () => {
 									<Clock className="text-green-500" size={20} />
 									<p className="pl-2">Hours of Operation :</p>
 								</div>
-								<div className="flex flex-col w-screen px-28">
-									<div className="flex justify-between pb-1">
+								<div className="grid grid-cols-2 gap-4">
+									<div>
 										<p className="text-green-500">Sun</p>
+									</div>
+									<div>
 										<p>12:00 PM - 8:00 PM</p>
 									</div>
-									<div className="flex justify-between pb-1">
+									<div>
 										<p>Mon</p>
+									</div>
+									<div>
 										<p>Closed</p>
 									</div>
-									<div className="flex justify-between pb-1">
+									<div>
 										<p>Tues</p>
+									</div>
+									<div>
 										<p>4:00 PM - 12:00 AM</p>
 									</div>
-									<div className="flex justify-between pb-1">
+									<div>
 										<p>Wed</p>
+									</div>
+									<div>
 										<p>4:00 PM - 12:00 AM</p>
 									</div>
-									<div className="flex justify-between pb-1">
+									<div>
 										<p>Thurs</p>
+									</div>
+									<div>
 										<p>4:00 PM - 12:00 AM</p>
 									</div>
-									<div className="flex justify-between pb-1">
+									<div>
 										<p>Fri</p>
+									</div>
+									<div>
 										<p>4:00 PM - 12:00 AM</p>
 									</div>
-									<div className="flex justify-between pb-1">
+									<div>
 										<p className="text-green-500">Sat</p>
-										<p>4:00 PM - 12:00 AM</p>
 									</div>
+									<dvi>
+										<p>4:00 PM - 12:00 AM</p>
+									</dvi>
 								</div>
 							</div>
 						</div>
