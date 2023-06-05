@@ -2,7 +2,7 @@ import { MapPin, Mail, Clock, Phone, Facebook } from 'react-feather';
 
 const Info = () => {
 	return (
-		<section id="info" className="relative">
+		<section id="info" className="relative scroll-m-12">
 			<div className="my-5">
 				<div className="bg-[#222] flex flex-col items-center py-3">
 					<h2 className="pb-10 mt-7 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-5xl">
