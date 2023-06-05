@@ -1,9 +1,8 @@
 import { Facebook } from 'react-feather';
-
 const Footer = () => {
 	return (
 		<footer>
-			<div className="relative bg-[#222] w-full flex justify-between py-3 text-white items-center font-medium">
+			<div className="relative bg-[#222] w-full flex justify-between py-3 text-white items-center font-medium md:text-lg">
 				<div className="ml-7">
 					M<span className="text-green-500">T</span>S
 				</div>
