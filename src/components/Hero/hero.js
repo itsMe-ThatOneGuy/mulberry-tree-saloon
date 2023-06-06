@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import stockHero from '../../images/stock-hero.jpg';
-
-const Hero = () => {
-	return (
-		<section>
-			<div>
-				<div
-					style={{
-						backgroundImage: `url("${stockHero}")`,
-					}}
-				>
-					<div>
-						<h1>Mulberry Tree</h1>
-						<h1>Saloon</h1>
-=======
 import heroImage from '../../images/heroImage.jpg';
 
 const Hero = () => {
@@ -31,7 +15,6 @@ const Hero = () => {
 						<h1 className="text-white text-3xl font-bold uppercase tracking-[.2em] edrop-shadow pt-12 md:text-5xl lg:text-8xl">
 							Saloon
 						</h1>
->>>>>>> styling
 					</div>
 				</div>
 			</div>

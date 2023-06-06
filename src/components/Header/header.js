@@ -4,10 +4,6 @@ import { useState } from 'react';
 const Header = () => {
 	const [mobileMenu, setMobileMenu] = useState(false);
 
-<<<<<<< HEAD
-	const toggleMobileMenu = () => {
-		setMobileMenu(!mobileMenu);
-=======
 	const body = document.querySelector('body');
 	const toggleBodyOverflow = () => {
 		!mobileMenu
@@ -18,20 +14,11 @@ const Header = () => {
 	const toggleMobileMenu = () => {
 		setMobileMenu(!mobileMenu);
 		toggleBodyOverflow();
->>>>>>> styling
 	};
 
 	const handleClick = () => {
 		toggleMobileMenu();
 	};
-<<<<<<< HEAD
-
-	return (
-		<header>
-			<div>
-				<div>
-					<a href="/">MTS</a>
-=======
 	return (
 		<header className="fixed top-0 left-0 z-40">
 			<div className="fixed flex w-full bg-[#222] items-center justify-between border-b border-black px-6 py-4 z-50">
@@ -42,47 +29,10 @@ const Header = () => {
 					>
 						M<span className="text-green-600">T</span>S
 					</a>
->>>>>>> styling
 				</div>
 
 				<div>
 					<nav>
-<<<<<<< HEAD
-						<ul>
-							<li>
-								<a href="#about">About</a>
-							</li>
-							<li>
-								<a href="#menu">Menu</a>
-							</li>
-							<li>
-								<a href="#info">Info</a>
-							</li>
-						</ul>
-
-						<div
-							onClick={() => {
-								handleClick();
-							}}
-						>
-							{!mobileMenu ? <Menu /> : <X />}
-							<ul
-								className={!mobileMenu ? 'mobile-menu' : 'mobile-menu active'}
-							>
-								<li>
-									<a href="#about">About</a>
-								</li>
-								<li>
-									<a href="#menu">Menu</a>
-								</li>
-								<li>
-									<a href="#info">Info</a>
-								</li>
-							</ul>
-						</div>
-					</nav>
-				</div>
-=======
 						<ul className="hidden md:flex">
 							<li>
 								<a
@@ -163,7 +113,6 @@ const Header = () => {
 					</li>
 				</ul>
 				<div></div>
->>>>>>> styling
 			</div>
 		</header>
 	);
