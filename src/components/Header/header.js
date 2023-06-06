@@ -21,7 +21,7 @@ const Header = () => {
 	};
 	return (
 		<header className="fixed top-0 left-0 z-40">
-			<div className="fixed flex w-full bg-[#222] items-center justify-between border-b border-black px-6 py-4 z-50">
+			<div className="fixed flex w-full bg-[#222] items-center justify-between border-b border-white px-6 py-4 z-50">
 				<div>
 					<a
 						className="text-3xl font-semibold text-white hover:text-green-600 transition-all ease-in duration-300"
