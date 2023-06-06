@@ -111,9 +111,9 @@ const Info = () => {
 										<div>
 											<p className="text-green-500">Sat</p>
 										</div>
-										<dvi>
+										<div>
 											<p>4:00 PM - 12:00 AM</p>
-										</dvi>
+										</div>
 									</div>
 								</div>
 							</div>
