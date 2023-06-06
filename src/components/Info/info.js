@@ -5,7 +5,7 @@ const Info = () => {
 		<section id="info" className="relative scroll-m-12">
 			<div className="my-5">
 				<div className="bg-[#222] flex flex-col items-center py-3">
-					<h2 className="pb-10 mt-7 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-5xl">
+					<h2 className="pb-10 mt-7 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-3xl">
 						- Information -
 					</h2>
 					<div className="w-full lg:grid grid-cols-2 text-white lg:px-56 lg:text-lg">
