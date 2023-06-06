@@ -9,12 +9,12 @@ import image6 from '../../images/image6.jpg';
 const Gallery = () => {
 	return (
 		<div className="relative">
-			<div className="flex justify-center">
+			<div className="flex justify-center lg:px-3">
 				<Carousel cols={3} rows={1} gap={10} loop autoplay={5000}>
 					<Carousel.Item>
 						<img
 							width="100%"
-							className="h-[400px] md:h-[600px]"
+							className="h-[400px] lg:h-[600px]"
 							src={image1}
 							alt=""
 						/>
@@ -22,7 +22,7 @@ const Gallery = () => {
 					<Carousel.Item>
 						<img
 							width="100%"
-							className="h-[400px] md:h-[600px]"
+							className="h-[400px] lg:h-[600px]"
 							src={image2}
 							alt=""
 						/>
@@ -30,7 +30,7 @@ const Gallery = () => {
 					<Carousel.Item>
 						<img
 							width="100%"
-							className="h-[400px] md:h-[600px]"
+							className="h-[400px] lg:h-[600px]"
 							src={image3}
 							alt=""
 						/>
@@ -38,7 +38,7 @@ const Gallery = () => {
 					<Carousel.Item>
 						<img
 							width="100%"
-							className="h-[400px] md:h-[600px]"
+							className="h-[400px] lg:h-[600px]"
 							src={image4}
 							alt=""
 						/>
@@ -46,7 +46,7 @@ const Gallery = () => {
 					<Carousel.Item>
 						<img
 							width="100%"
-							className="h-[400px] md:h-[600px]"
+							className="h-[400px] lg:h-[600px]"
 							src={image5}
 							alt=""
 						/>
@@ -54,7 +54,7 @@ const Gallery = () => {
 					<Carousel.Item>
 						<img
 							width="100%"
-							className="h-[400px] md:h-[600px]"
+							className="h-[400px] lg:h-[600px]"
 							src={image6}
 							alt=""
 						/>
