@@ -30,7 +30,7 @@ const Info = () => {
 										<MapPin className="text-green-500" size={20} />
 										<p className="pl-2">Location :</p>
 									</div>
-									<div>
+									<div className="text-center">
 										<p>
 											610 State Hwy 265
 											<br />
