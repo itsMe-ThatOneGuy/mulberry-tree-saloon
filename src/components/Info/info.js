@@ -128,7 +128,7 @@ const Info = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<button className="text-white hover:bg-blue-500 ease-in-out duration-75 rounded-3xl p-3">
+							<button className="text-white hover:bg-blue-500 ease-in-out duration-300 rounded-3xl p-3">
 								<Facebook size={50} />
 							</button>
 						</a>
