@@ -1,14 +1,27 @@
 import { MapPin, Mail, Clock, Phone, Facebook } from 'react-feather';
+import { motion } from 'framer-motion';
 
 const Info = () => {
 	return (
 		<section id="info" className="relative scroll-m-12">
 			<div className="my-5">
 				<div className="bg-[#222] flex flex-col items-center py-3">
-					<h2 className="pb-10 mt-7 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-3xl">
+					<motion.h2
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						transition={{ duration: 1, delay: 0.25 }}
+						viewport={{ once: true }}
+						className="pb-10 mt-7 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-3xl"
+					>
 						- Information -
-					</h2>
-					<div className="w-full lg:grid grid-cols-2 text-white lg:px-56 lg:text-lg">
+					</motion.h2>
+					<motion.div
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						transition={{ duration: 1, delay: 0.5 }}
+						viewport={{ once: true }}
+						className="w-full lg:grid grid-cols-2 text-white lg:px-56 lg:text-lg"
+					>
 						<div className="flex flex-col items-center md:justify-center">
 							{/* Google maps image*/}
 							<div className="w-2/3">
@@ -19,6 +32,22 @@ const Info = () => {
 									loading="lazy"
 									referrerPolicy="no-referrer-when-downgrade"
 								></iframe>
+							</div>
+							<div className="hidden lg:flex flex-col items-center pt-7">
+								<div className="text-white text-center font-medium text-xl py-3 lg:text-2xl">
+									<p>Visit our Facebook page for all upcoming Events!</p>
+								</div>
+								<div className="pb-3">
+									<a
+										href="https://www.facebook.com/profile.php?id=100057060955346"
+										target="_blank"
+										rel="noreferrer"
+									>
+										<button className="text-white hover:bg-blue-500 ease-in-out duration-300 rounded-3xl p-3">
+											<Facebook size={50} />
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
 
@@ -118,21 +147,29 @@ const Info = () => {
 								</div>
 							</div>
 						</div>
-					</div>
-					<div className="text-white text-center font-medium text-xl py-3 lg:text-2xl">
-						<p>Visit our Facebook page for all upcoming Events!</p>
-					</div>
-					<div className="pb-3">
-						<a
-							href="https://www.facebook.com/profile.php?id=100057060955346"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<button className="text-white hover:bg-blue-500 ease-in-out duration-300 rounded-3xl p-3">
-								<Facebook size={50} />
-							</button>
-						</a>
-					</div>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						transition={{ duration: 1, delay: 0.5 }}
+						viewport={{ once: true }}
+						className="flex flex-col items-center lg:hidden"
+					>
+						<div className="text-white text-center font-medium text-xl py-3 lg:text-2xl">
+							<p>Visit our Facebook page for all upcoming Events!</p>
+						</div>
+						<div className="pb-3">
+							<a
+								href="https://www.facebook.com/profile.php?id=100057060955346"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<button className="text-white hover:bg-blue-500 ease-in-out duration-300 rounded-3xl p-3">
+									<Facebook size={50} />
+								</button>
+							</a>
+						</div>
+					</motion.div>
 				</div>
 			</div>
 		</section>
