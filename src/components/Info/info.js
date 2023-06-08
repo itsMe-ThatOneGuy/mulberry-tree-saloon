@@ -9,7 +9,7 @@ const Info = () => {
 					<motion.h2
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
-						transition={{ duration: 1, delay: 0.25 }}
+						transition={{ duration: 1 }}
 						viewport={{ once: true }}
 						className="pb-10 mt-7 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-3xl"
 					>
@@ -18,7 +18,7 @@ const Info = () => {
 					<motion.div
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
-						transition={{ duration: 1, delay: 0.5 }}
+						transition={{ duration: 1, delay: 0.25 }}
 						viewport={{ once: true }}
 						className="w-full lg:grid grid-cols-2 text-white lg:px-56 lg:text-lg"
 					>
@@ -151,11 +151,11 @@ const Info = () => {
 					<motion.div
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
-						transition={{ duration: 1, delay: 0.5 }}
+						transition={{ duration: 1 }}
 						viewport={{ once: true }}
 						className="flex flex-col items-center lg:hidden"
 					>
-						<div className="text-white text-center font-medium text-xl py-3 lg:text-2xl">
+						<div className="text-white text-center font-medium text-xl py-3 lg:text-3xl">
 							<p>Visit our Facebook page for all upcoming Events!</p>
 						</div>
 						<div className="pb-3">

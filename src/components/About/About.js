@@ -9,7 +9,7 @@ const About = () => {
 						<motion.h2
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 1 }}
 							viewport={{ once: true }}
 							className="pb-10 mt-7 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-3xl"
 						>
@@ -19,7 +19,7 @@ const About = () => {
 						<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
-							transition={{ duration: 1, delay: 0.5 }}
+							transition={{ duration: 1, delay: 0.25 }}
 							viewport={{ once: true }}
 							className="text-white text-center lg:text-xl font-normal"
 						>
