@@ -5,13 +5,13 @@ const About = () => {
 		<section id="about" className="relative w-full h-full scroll-m-12">
 			<div className="my-5">
 				<div className="bg-[#222] py-3">
-					<div className="flex flex-col items-center py-10 px-10 lg:mx-80">
+					<div className="flex flex-col items-center pb-10 px-10 lg:mx-80">
 						<motion.h2
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
-							transition={{ duration: 1, delay: 0.5 }}
+							transition={{ duration: 1, delay: 0.25 }}
 							viewport={{ once: true }}
-							className="pb-10 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-3xl"
+							className="pb-10 mt-7 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-3xl"
 						>
 							- Our Story -
 						</motion.h2>
@@ -19,7 +19,7 @@ const About = () => {
 						<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
-							transition={{ duration: 1, delay: 0.75 }}
+							transition={{ duration: 1, delay: 0.5 }}
 							viewport={{ once: true }}
 							className="text-white text-center lg:text-xl font-normal"
 						>
