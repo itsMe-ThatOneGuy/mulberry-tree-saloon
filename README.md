@@ -8,5 +8,6 @@ A website for a bar / restaurant / live music venue located in Marionville Misso
 
 - [Create-React-App](https://create-react-app.dev/)
 - [ReactJS](https://react.dev/)
+- [Framer-Motion](https://www.framer.com/motion/)
 - JavaScript
 - [Tailwind CSS](https://tailwindcss.com/)
