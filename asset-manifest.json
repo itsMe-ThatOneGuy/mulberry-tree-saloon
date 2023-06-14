@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mulberry-tree-saloon/static/css/main.7066a3a8.css",
-    "main.js": "/mulberry-tree-saloon/static/js/main.7d4c4ed7.js",
+    "main.js": "/mulberry-tree-saloon/static/js/main.06b5d2b6.js",
     "static/js/787.8b44b795.chunk.js": "/mulberry-tree-saloon/static/js/787.8b44b795.chunk.js",
     "static/media/heroImage.jpg": "/mulberry-tree-saloon/static/media/heroImage.4bd470baabe47440c168.jpg",
     "static/media/image6.jpg": "/mulberry-tree-saloon/static/media/image6.30335db5bb261b97e276.jpg",
@@ -12,11 +12,11 @@
     "static/media/image4.jpg": "/mulberry-tree-saloon/static/media/image4.2bf2d464d855e4bc94a0.jpg",
     "index.html": "/mulberry-tree-saloon/index.html",
     "main.7066a3a8.css.map": "/mulberry-tree-saloon/static/css/main.7066a3a8.css.map",
-    "main.7d4c4ed7.js.map": "/mulberry-tree-saloon/static/js/main.7d4c4ed7.js.map",
+    "main.06b5d2b6.js.map": "/mulberry-tree-saloon/static/js/main.06b5d2b6.js.map",
     "787.8b44b795.chunk.js.map": "/mulberry-tree-saloon/static/js/787.8b44b795.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7066a3a8.css",
-    "static/js/main.7d4c4ed7.js"
+    "static/js/main.06b5d2b6.js"
   ]
 }
