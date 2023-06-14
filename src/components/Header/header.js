@@ -25,7 +25,7 @@ const Header = () => {
 				<div>
 					<a
 						className="text-3xl font-semibold text-white hover:text-green-600 transition-all ease-in duration-300"
-						href="/"
+						href="index.html"
 					>
 						M<span className="text-green-600">T</span>S
 					</a>
