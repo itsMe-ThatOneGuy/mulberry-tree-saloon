@@ -1,4 +1,4 @@
-import { MapPin, Mail, Clock, Phone, Facebook } from 'react-feather';
+import { MapPin, Mail, Clock, Phone, Facebook, Instagram } from 'react-feather';
 import { motion } from 'framer-motion';
 
 const Info = () => {
@@ -45,6 +45,15 @@ const Info = () => {
 									>
 										<button className="text-white hover:bg-blue-500 ease-in-out duration-300 rounded-3xl p-3">
 											<Facebook size={50} />
+										</button>
+									</a>
+									<a
+										href="https://www.instagram.com/mulberrytreesaloon/"
+										target="_blank"
+										rel="noreferrer"
+									>
+										<button className="text-white hover:bg-[#DD2A7B] ease-in-out duration-300 rounded-3xl p-3">
+											<Instagram size={50} />
 										</button>
 									</a>
 								</div>
@@ -146,28 +155,6 @@ const Info = () => {
 									</div>
 								</div>
 							</div>
-						</div>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{ duration: 1 }}
-						viewport={{ once: true }}
-						className="flex flex-col items-center lg:hidden"
-					>
-						<div className="text-white text-center font-medium text-xl py-3 lg:text-3xl">
-							<p>Visit our Facebook page for all upcoming Events!</p>
-						</div>
-						<div className="pb-3">
-							<a
-								href="https://www.facebook.com/profile.php?id=100057060955346"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<button className="text-white hover:bg-blue-500 ease-in-out duration-300 rounded-3xl p-3">
-									<Facebook size={50} />
-								</button>
-							</a>
 						</div>
 					</motion.div>
 				</div>
