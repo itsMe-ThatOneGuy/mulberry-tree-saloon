@@ -45,7 +45,9 @@ const Header = () => {
 							<li>
 								<a
 									className="text-2xl hover:text-green-600 text-white mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
-									href="#menu"
+									target="_blank"
+									rel="noreferrer"
+									href="https://qrfy.io/p/sBtOePJwpc?utm_source=qrcode&utm_medium=images&utm_campaign=35903903"
 								>
 									Menu
 								</a>
@@ -95,7 +97,9 @@ const Header = () => {
 							onClick={() => {
 								handleClick();
 							}}
-							href="#menu"
+							target="_blank"
+							rel="noreferrer"
+							href="https://qrfy.io/p/sBtOePJwpc?utm_source=qrcode&utm_medium=images&utm_campaign=35903903"
 						>
 							Menu
 						</a>
