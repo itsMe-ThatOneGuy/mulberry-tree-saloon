@@ -14,13 +14,13 @@ const Footer = () => {
 					</p>
 					<p>All rights reserved.</p>
 				</div>
-				<div>
+				<div className="flex">
 					<a
 						href="https://www.facebook.com/profile.php?id=100057060955346"
 						target="_blank"
 						rel="noreferrer"
 					>
-						<button className="mr-7 hover:text-blue-600">
+						<button className=" lg:mr-3 hover:text-blue-600">
 							<Facebook size={25} />
 						</button>
 					</a>
