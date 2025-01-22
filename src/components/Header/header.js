@@ -1,8 +1,39 @@
 import { Menu, X } from 'react-feather';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
 	const [mobileMenu, setMobileMenu] = useState(false);
+	const [isSticky, setIsSticky] = useState(false);
+	const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsSticky(window.scrollY > 0);
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
+	useEffect(() => {
+		let lastScrollY = window.scrollY;
+
+		const updateHeaderVisibility = () => {
+			const currentScrollY = window.scrollY;
+
+			if (currentScrollY <= 0) {
+				setIsHeaderVisible(true);
+			} else if (currentScrollY > lastScrollY) {
+				setIsHeaderVisible(false);
+			} else {
+				setIsHeaderVisible(true);
+			}
+
+			lastScrollY = currentScrollY;
+		};
+
+		window.addEventListener('scroll', updateHeaderVisibility);
+		return () => window.removeEventListener('scroll', updateHeaderVisibility);
+	}, []);
 
 	const body = document.querySelector('body');
 	const toggleBodyOverflow = () => {
