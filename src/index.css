@@ -2,8 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@font-face {
+    font-family: 'Liquidism';
+    src: url(./fonts/Liquidism.woff) format('woff');
 }
+
+@font-face {
+    font-family: 'Zomboi';
+    src: url(./fonts/Zomboi.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'RoboSlab';
+    src: url(./fonts/RobotoSlab-VariableFont_wght.ttf) format('woff');
+}
+
+@layer base {}
 
 @layer components {
     .mobile-nav {
