@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				liquidism: ['liquidism', 'sans-serif'],
+				liquidism2: ['liquidism2', 'sans-serif'],
 				zomboi: ['zomboi', 'sans-serif'],
 				sans: ['roboslab', 'sans-serif'],
 			},

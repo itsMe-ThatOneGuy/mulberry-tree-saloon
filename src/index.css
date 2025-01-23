@@ -8,6 +8,11 @@
 }
 
 @font-face {
+    font-family: 'Liquidism2';
+    src: url(./fonts/LIQUIDISMPART2.TTF) format('woff');
+}
+
+@font-face {
     font-family: 'Zomboi';
     src: url(./fonts/Zomboi.woff) format('woff');
 }
