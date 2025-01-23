@@ -50,24 +50,32 @@ const Header = () => {
 	const handleClick = () => {
 		toggleMobileMenu();
 	};
+
 	return (
-		<header className="fixed top-0 left-0 z-40">
-			<div className="fixed flex w-full bg-[#222] items-center justify-between border-b border-white px-6 py-4 z-50">
-				<div>
+		<header
+			className={`fixed top-0 left-0 z-50 w-full transition-transform duration-300 ${
+				isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
+			}`}
+		>
+			<div
+				className={`flex w-full bg-[#222] items-center justify-between px-6 py-4 z-40 ${
+					isSticky ? 'shadow-md' : ''
+				}`}
+			>
+				<div className="z-50">
 					<a
-						className="text-3xl font-semibold text-white hover:text-green-600 transition-all ease-in duration-300"
-						href="index.html"
+						className="text-3xl font-medium tracking-wide text-[#F0F7EE] hover:text-[#47A025] transition-all ease-in-out duration-300"
+						href="#top"
 					>
-						M<span className="text-green-600">T</span>S
+						M<span className="font-liquidism text-[#47A025]">T</span>S
 					</a>
 				</div>
-
 				<div>
 					<nav>
-						<ul className="hidden md:flex">
+						<ul className="hidden sm:flex">
 							<li>
 								<a
-									className="text-2xl hover:text-green-600 text-white mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
+									className="text-2xl hover:text-[#47A025] text-[#F0F7EE] mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
 									href="#about"
 								>
 									About
@@ -75,7 +83,7 @@ const Header = () => {
 							</li>
 							<li>
 								<a
-									className="text-2xl hover:text-green-600 text-white mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
+									className="font-zomboi tracking-widest text-2xl hover:text-[#47A025] text-[#F0F7EE] mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
 									target="_blank"
 									rel="noreferrer"
 									href="https://qrfy.io/p/sBtOePJwpc?utm_source=qrcode&utm_medium=images&utm_campaign=35903903"
@@ -85,7 +93,7 @@ const Header = () => {
 							</li>
 							<li>
 								<a
-									className="text-2xl hover:text-green-600 text-white mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
+									className="text-2xl hover:text-[#47A025] text-[#F0F7EE] mr-7 font-medium uppercase cursor-pointer transition-all ease-in-out duration-300"
 									href="#info"
 								>
 									Info
@@ -96,27 +104,22 @@ const Header = () => {
 				</div>
 
 				<div
-					onClick={() => {
-						handleClick();
-					}}
-					className="text-white cursor-pointer md:hidden"
+					onClick={handleClick}
+					className="text-[#F0F7EE] cursor-pointer sm:hidden z-50"
 				>
 					{!mobileMenu ? (
-						<Menu className="hover:text-green-600 transition-all ease-in-out duration-300" />
+						<Menu className="hover:text-[#47A025] transition-all ease-in-out duration-300" />
 					) : (
-						<X className="hover:text-green-600 transition-all ease-in-out duration-300" />
+						<X className="hover:text-[#47A025] transition-all ease-in-out duration-300" />
 					)}
 				</div>
 			</div>
-
-			<div className={!mobileMenu ? 'mobile-nav' : 'mobile-nav active'}>
-				<ul className="relative flex-col items-center top-1/3 text-center uppercase text-white">
+			<div className={`${!mobileMenu ? 'mobile-nav' : 'mobile-nav active'} `}>
+				<ul className="relative flex-col items-center top-1/3 text-center uppercase text-[#F0F7EE]">
 					<li className="block pb-14">
 						<a
-							className="hover:text-green-600 transition-all ease-in-out duration-300"
-							onClick={() => {
-								handleClick();
-							}}
+							className="underline underline-offset-8 decoration-[#47A025] hover:text-[#47A025] transition-all ease-in-out duration-300"
+							onClick={handleClick}
 							href="#about"
 						>
 							About
@@ -124,10 +127,8 @@ const Header = () => {
 					</li>
 					<li className="block pb-14">
 						<a
-							className="hover:text-green-600 transition-all ease-in-out duration-300"
-							onClick={() => {
-								handleClick();
-							}}
+							className="font-zomboi tracking-widest underline underline-offset-8 decoration-[#E71D36] hover:text-[#47A025] transition-all ease-in-out duration-300"
+							onClick={handleClick}
 							target="_blank"
 							rel="noreferrer"
 							href="https://qrfy.io/p/sBtOePJwpc?utm_source=qrcode&utm_medium=images&utm_campaign=35903903"
@@ -137,17 +138,14 @@ const Header = () => {
 					</li>
 					<li className="block pb-14">
 						<a
-							className="hover:text-green-600 transition-all ease-in-out duration-300"
-							onClick={() => {
-								handleClick();
-							}}
+							className="underline underline-offset-8 decoration-[#47A025] hover:text-[#47A025] transition-all ease-in-out duration-300"
+							onClick={handleClick}
 							href="#info"
 						>
 							Info
 						</a>
 					</li>
 				</ul>
-				<div></div>
 			</div>
 		</header>
 	);

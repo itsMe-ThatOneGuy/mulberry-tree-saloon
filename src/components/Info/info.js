@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 
 const Info = () => {
 	return (
-		<section id="info" className="relative scroll-m-12">
-			<div className="my-5">
-				<div className="bg-[#222] flex flex-col items-center py-3">
+		<section id="info" className="relative scroll-m-8">
+			<div className="mt-5">
+				<div className="bg-[#071108] flex flex-col items-center py-3">
 					<motion.h2
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						transition={{ duration: 1 }}
 						viewport={{ once: true }}
-						className="pb-10 mt-7 font-medium text-green-500 text-2xl text-center uppercase tracking-widest lg:text-3xl"
+						className="font-liquidism pb-10 mt-7 font-bold text-[#47A025] text-2xl text-center uppercase tracking-widest lg:text-3xl"
 					>
 						- Information -
 					</motion.h2>
@@ -33,12 +33,13 @@ const Info = () => {
 									referrerPolicy="no-referrer-when-downgrade"
 								></iframe>
 							</div>
-							<div className="hidden lg:flex flex-col items-center pt-7">
-								<div className="text-white text-center font-medium text-xl py-3 lg:text-2xl">
+							<div className="flex flex-col items-center pt-7">
+								<div className="text-white text-center font-medium text-xl p-3 lg:text-2xl">
 									<p>Visit our Facebook page for all upcoming Events!</p>
 								</div>
 								<div className="pb-3">
 									<a
+										className="mr-4"
 										href="https://www.facebook.com/profile.php?id=100057060955346"
 										target="_blank"
 										rel="noreferrer"
@@ -64,39 +65,47 @@ const Info = () => {
 							{/* contact info */}
 							<div className="py-7 font-semibold text-lg lg:text-xl">
 								<div className="flex flex-col items-center py-3">
-									<div className="flex pb-3">
-										<MapPin className="text-green-500" size={20} />
+									<div className="flex items-center pb-3">
+										<MapPin className="text-[#47A025]" size={20} />
 										<p className="pl-2">Location :</p>
 									</div>
 									<div className="text-center">
-										<p>
+										<a
+											className="underline md:no-underline md:hover:underline"
+											href="https://shorturl.at/aBBmL"
+											target="_blank"
+											rel="noreferrer"
+										>
 											610 State Hwy 265
 											<br />
 											Marionville, MO 65705
-										</p>
+										</a>
 									</div>
 								</div>
 
 								<div className="flex flex-col items-center py-3">
-									<div className="flex pb-3">
-										<Phone className="text-green-500" size={20} />
+									<div className="flex items-center pb-3">
+										<Phone className="text-[#47A025]" size={20} />
 										<p className="pl-2">Phone :</p>
 									</div>
 									<div>
-										<a className="underline" href="tel:4173669857">
+										<a
+											className="underline md:no-underline md:hover:underline"
+											href="tel:4173669857"
+										>
 											(417) 366-9857
 										</a>
 									</div>
 								</div>
 
 								<div className="flex flex-col items-center py-3">
-									<div className="flex pb-3">
-										<Mail className="text-green-500" size={20} />
+									<div className="flex items-center pb-3">
+										<Mail className="text-[#47A025]" size={20} />
 										<p className="pl-2">Email :</p>
 									</div>
 									<div>
 										<a
-											className="underline"
+											className="underline md:no-underline md:hover:underline"
 											href="mailto:MulberryMail@yahoo.com"
 										>
 											MulberryMail@yahoo.com
@@ -105,52 +114,70 @@ const Info = () => {
 								</div>
 
 								<div className="flex flex-col items-center py-3">
-									<div className="flex pb-3">
-										<Clock className="text-green-500" size={20} />
+									<div className="flex items-center pb-3">
+										<Clock className="text-[#47A025]" size={20} />
 										<p className="pl-2">Hours of Operation :</p>
 									</div>
-									<div className="grid grid-cols-2 gap-4">
-										<div>
-											<p className="text-green-500">Sun</p>
+									<div className="flex flex-col">
+										<div className="pb-3">
+											<div className="flex pb-3 items-center justify-center">
+												<p>
+													The City{' '}
+													<span className="font-zomboi text-[#E71D36]">
+														Morgue
+													</span>{' '}
+													Kitchen
+												</p>
+											</div>
+
+											<div className="flex justify-between pb-2">
+												<p className="pr-8">
+													<span>Tues</span> -{' '}
+													<span className="text-[#E71D36]">Sat</span>
+												</p>
+												<p>11:00 AM - 11:00 PM</p>
+											</div>
 										</div>
 										<div>
-											<p>12:00 PM - 8:00 PM</p>
-										</div>
-										<div>
-											<p>Mon</p>
-										</div>
-										<div>
-											<p>Closed</p>
-										</div>
-										<div>
-											<p>Tues</p>
-										</div>
-										<div>
-											<p>4:00 PM - 12:00 AM</p>
-										</div>
-										<div>
-											<p>Wed</p>
-										</div>
-										<div>
-											<p>4:00 PM - 12:00 AM</p>
-										</div>
-										<div>
-											<p>Thurs</p>
-										</div>
-										<div>
-											<p>4:00 PM - 12:00 AM</p>
-										</div>
-										<div>
-											<p>Fri</p>
-										</div>
-										<div>
-											<p>4:00 PM - 12:00 AM</p>
-										</div>
-										<div>
-											<p className="text-green-500">Sat</p>
-										</div>
-										<div>
-											<p>4:00 PM - 12:00 AM</p>
+											<div className="flex pb-3 items-center justify-center">
+												<p>
+													Mulberry{' '}
+													<span className="font-liquidism2 text-[#47A025]">
+														Tree
+													</span>{' '}
+													Saloon
+												</p>
+											</div>
+											<div className="flex justify-between pb-2">
+												<p className="text-[#47A025] pr-8">Sun</p>
+												<p>11:00 AM - 8:00 PM</p>
+											</div>
+											<div className="flex justify-between pb-2">
+												<p>Mon</p>
+												<p className="font-liquidism2 tracking-wide text-[#E71D36]">
+													CLOSED
+												</p>
+											</div>
+											<div className="flex justify-between pb-2">
+												<p>Tues</p>
+												<p>11:00 AM - 12:00 AM</p>
+											</div>
+											<div className="flex justify-between pb-2">
+												<p>Wed</p>
+												<p>11:00 AM - 12:00 AM</p>
+											</div>
+											<div className="flex justify-between pb-2">
+												<p>Thurs</p>
+												<p>11:00 AM - 12:00 AM</p>
+											</div>
+											<div className="flex justify-between pb-2">
+												<p>Fri</p>
+												<p>11:00 AM - 1:30 AM</p>
+											</div>
+											<div className="flex justify-between pb-2">
+												<p className="text-[#47A025]">Sat</p>
+												<p>11:00 AM - 1:30 AM</p>
+											</div>
 										</div>
 									</div>
 								</div>
