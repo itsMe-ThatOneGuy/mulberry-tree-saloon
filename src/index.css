@@ -6,15 +6,23 @@
 }
 
 @layer components {
-	.mobile-nav {
-		@apply fixed block w-full h-0 top-0 left-0 bg-black bg-opacity-70 text-3xl overflow-y-hidden transition-all ease-in-out duration-500 md:hidden;
-	}
+    .mobile-nav {
+        @apply fixed block w-full h-0 top-0 left-0 bg-black bg-opacity-80 text-3xl overflow-y-hidden transition-all ease-in-out duration-500 md:hidden;
+    }
 
-	.mobile-nav.active {
-		@apply h-screen;
-	}
+    .mobile-nav.active {
+        @apply h-screen;
+    }
 
-	body.active {
-		@apply overflow-hidden;
-	}
+    .mobile-nav.sticky {
+        @apply transform translate-y-[-%100];
+    }
+
+    body.active {
+        @apply overflow-hidden;
+    }
+
+    body {
+        @apply bg-[#361134] scroll-smooth;
+    }
 }
