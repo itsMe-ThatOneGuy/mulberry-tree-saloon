@@ -11,7 +11,7 @@ const Info = () => {
 						whileInView={{ opacity: 1 }}
 						transition={{ duration: 1 }}
 						viewport={{ once: true }}
-						className="font-liquidism pb-10 mt-7 font-bold text-[#47A025] text-2xl text-center uppercase tracking-widest lg:text-3xl"
+						className="font-liquidism pb-10 mt-7 font-bold text-[#47A025] text-2xl text-center uppercase tracking-widest lg:text-4xl lg:mt-10"
 					>
 						- Information -
 					</motion.h2>
@@ -37,7 +37,7 @@ const Info = () => {
 								<div className="text-white text-center font-medium text-xl p-3 lg:text-2xl">
 									<p>Visit our Facebook page for all upcoming Events!</p>
 								</div>
-								<div className="pb-3">
+								<div>
 									<a
 										className="mr-4"
 										href="https://www.facebook.com/profile.php?id=100057060955346"
