@@ -1,6 +1,25 @@
+import React, { useState, useEffect } from 'react';
+import aboutMobile from '../../images/about_bg_mb.png';
+import aboutPc from '../../images/about_bg_lg.png';
 import { motion } from 'framer-motion';
 
 const About = () => {
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		const handleResize = () => setWindowWidth(window.innerWidth);
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
+	const getBackgroundImage = () => {
+		if (windowWidth < 768) {
+			return `url("${aboutMobile}")`;
+		} else {
+			return `url("${aboutPc}")`;
+		}
+	};
+
 	return (
 		<section id="about" className="w-full h-full scroll-m-12">
 			<div className="mb-5">
@@ -15,6 +34,10 @@ const About = () => {
 						>
 							- Dare to Enter -
 						</motion.h2>
+				<div
+					className="lg:bg-fixed bg-cover"
+					style={{ backgroundImage: getBackgroundImage() }}
+				>
 
 						<motion.div
 							initial={{ opacity: 0 }}
