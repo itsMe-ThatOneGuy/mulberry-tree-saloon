@@ -1,5 +1,6 @@
 import Carousel from 'better-react-carousel';
 import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import image1 from '../../images/image1.jpg';
 import image2 from '../../images/image2.jpg';
@@ -20,7 +21,7 @@ import image16 from '../../images/image16.jpg';
 import image17 from '../../images/image17.jpg';
 import image18 from '../../images/image18.jpg';
 
-let imageArray = [
+const images = [
 	image1,
 	image2,
 	image3,
@@ -41,44 +42,82 @@ let imageArray = [
 	image18,
 ];
 
-const shuffledArray = shuffleArray(imageArray);
-
 function shuffleArray(array) {
-	for (let i = array.length - 1; i > 0; i--) {
+	const shuffled = [...array];
+	for (let i = shuffled.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
-		[array[i], array[j]] = [array[j], array[i]];
+		[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
 	}
-	return array;
+	return shuffled;
 }
 
-const CarouselItem = (img) => {
-	return (
-		<Carousel.Item>
-			<img
-				width="100%"
-				className="h-[400px] sm:h-[350px] lg:h-[600px]"
-				src={img}
-				alt=""
-			/>
-		</Carousel.Item>
-	);
-};
-
 const Gallery = () => {
+	const shuffledImages = shuffleArray(images);
+
 	return (
-		<div className="relative">
+		<section id="gallery" className="py-10 px-4 md:px-12 lg:px-24">
+			{/* Mobile Carousel */}
+			<div className="sm:hidden">
+				<Carousel cols={1} rows={1} gap={10} loop autoplay={4000}>
+					{shuffledImages.slice(0, 8).map((img, index) => (
+						<Carousel.Item key={index}>
+							<div className="h-72 overflow-hidden rounded-xl shadow-md">
+								<img
+									src={img}
+									alt={`Gallery ${index + 1}`}
+									loading="lazy"
+									className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+								/>
+							</div>
+						</Carousel.Item>
+					))}
+				</Carousel>
+			</div>
+
+			{/* Desktop Carousel */}
 			<motion.div
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
-				transition={{ duration: 1 }}
+				transition={{ duration: 1, delay: 0.2 }}
 				viewport={{ once: true }}
-				className="flex justify-center lg:px-3"
+				className="relative hidden sm:block"
 			>
-				<Carousel cols={3} rows={1} gap={10} loop autoplay={5000}>
-					{shuffledArray.map((e) => CarouselItem(e))}
+				<Carousel
+					cols={3}
+					rows={1}
+					gap={10}
+					loop
+					autoplay={5000}
+					arrowLeft={
+						<div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 -ml-6">
+							<button className="bg-black/60 hover:bg-black/80 text-white p-2 rounded-full">
+								<ChevronLeft size={24} />
+							</button>
+						</div>
+					}
+					arrowRight={
+						<div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 -mr-6">
+							<button className="bg-black/60 hover:bg-black/80 text-white p-2 rounded-full">
+								<ChevronRight size={24} />
+							</button>
+						</div>
+					}
+				>
+					{shuffledImages.map((img, index) => (
+						<Carousel.Item key={index}>
+							<div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-xl shadow-md px-2">
+								<img
+									src={img}
+									alt={`Gallery ${index + 1}`}
+									loading="lazy"
+									className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+								/>
+							</div>
+						</Carousel.Item>
+					))}
 				</Carousel>
 			</motion.div>
-		</div>
+		</section>
 	);
 };
 
