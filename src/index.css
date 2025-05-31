@@ -38,7 +38,82 @@
     .animate-fade-in-down {
         animation: fade-in-down 0.5s ease-out;
     }
+
+
+    @keyframes flicker {
+
+        0%,
+        19%,
+        21%,
+        23%,
+        25%,
+        54%,
+        56%,
+        100% {
+            opacity: 1;
+        }
+
+        20%,
+        24%,
+        55% {
+            opacity: 0.4;
+        }
+    }
+
+    .animate-flicker {
+        animation: flicker 2s infinite;
+    }
+
+    @keyframes slowPulse {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-3px);
+        }
+    }
+
+    .animate-slowPulse {
+        animation: slowPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes fadeGlow {
+
+        0%,
+        100% {
+            text-shadow: 0 0 10px rgba(139, 30, 30, 0.3);
+        }
+
+        50% {
+            text-shadow: 0 0 20px rgba(139, 30, 30, 0.6);
+        }
+    }
+
+    .animate-fadeGlow {
+        animation: fadeGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+
+        0%,
+        100% {
+            text-shadow: 0 0 5px #8B1E1E, 0 0 10px #8B1E1E, 0 0 15px #8B1E1E;
+        }
+
+        50% {
+            text-shadow: 0 0 10px #8B1E1E, 0 0 20px #8B1E1E, 0 0 30px #8B1E1E;
+        }
+    }
+
+    .animate-glowPulse {
+        animation: glowPulse 2.5s ease-in-out infinite;
+    }
+
 }
+
 
 @layer base {}
 
@@ -67,7 +142,11 @@
         }
 
         body {
-            @apply bg-black scroll-smooth;
+            @apply bg-black;
+        }
+
+        html {
+            scroll-behavior: smooth
         }
     }
 }
