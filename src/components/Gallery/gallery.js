@@ -74,7 +74,6 @@ const Gallery = () => {
 				</Carousel>
 			</div>
 
-			{/* Desktop Carousel */}
 			<motion.div
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}

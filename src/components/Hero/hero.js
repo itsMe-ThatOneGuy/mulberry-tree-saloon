@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import outsideMobile from '../../images/outside-mobile.jpg';
 import outside from '../../images/outside.jpg';
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [showFlicker, setShowFlicker] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => setWindowWidth(window.innerWidth);
@@ -13,11 +15,7 @@ const Hero = () => {
 	}, []);
 
 	const getBackgroundImage = () => {
-		if (windowWidth < 768) {
-			return `url("${outsideMobile}")`;
-		} else {
-			return `url("${outside}")`;
-		}
+		return `url("${windowWidth < 768 ? outsideMobile : outside}")`;
 	};
 
 	return (
@@ -26,51 +24,87 @@ const Hero = () => {
 			id="top"
 		>
 			<div
-				className=" w-full h-full bg-cover"
+				className="w-full h-full bg-cover shadow-inner"
 				style={{ backgroundImage: getBackgroundImage() }}
 			>
-				<div className="bg-[#071108] bg-opacity-60 h-screen flex flex-col justify-center items-center">
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ delay: 0.2, duration: 0.7, ease: 'linear' }}
-						className=" flex flex-col justify-center items-center"
+				<div className="hero-overlay bg-black text-[#F0F7EE] bg-opacity-60 min-h-screen flex flex-col justify-center items-center px-4 text-center shadow-inner relative overflow-hidden">
+					<motion.h1
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.2, duration: 0.8 }}
+						className="text-4xl md:text-6xl lg:text-8xl font-bold uppercase tracking-widest drop-shadow animate-slowPulse"
 					>
-						<h1 className="text-[#F0F7EE] text-3xl font-bold uppercase tracking-wide lg:tracking-[.1em] drop-shadow md:text-5xl lg:text-8xl">
-							Mulberry{' '}
-							<span className="font-liquidism2 tracking-widest text-[#47A025]">
-								Tree
+						Mulberry Tree Saloon
+					</motion.h1>
+
+					<motion.h2
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 1, duration: 0.8 }}
+						className="text-xl md:text-3xl lg:text-4xl uppercase pt-6 tracking-wider text-[#B0C4B1] drop-shadow-md animate-fadeGlow"
+					>
+						Home of
+					</motion.h2>
+
+					<motion.h3
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 1.6, duration: 0.7 }}
+						onAnimationComplete={() => setShowFlicker(true)}
+						className={`text-[#8B1E1E] font-liquidism2 text-4xl md:text-5xl lg:text-7xl pt-4 uppercase ${
+							showFlicker ? 'animate-flicker' : ''
+						}`}
+					>
+						The City Morgue Kitchen
+					</motion.h3>
+
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 2.2, duration: 0.6 }}
+						className="pt-10"
+					>
+						<motion.a
+							href="https://qrfy.io/p/sBtOePJwpc?utm_source=qrcode&utm_medium=images&utm_campaign=35903903"
+							target={'_blank'}
+							rel={'noopener noreferrer'}
+							whileHover={{
+								scale: 1.05,
+								boxShadow: '0 0 20px rgba(139, 30, 30, 0.8)',
+							}}
+							whileTap={{ scale: 0.95 }}
+							className="relative px-4 py-2 lg:px-8 lg:py-4 lg:text-lg uppercase font-bold tracking-widest rounded border-2 text-[#F0F7EE] hover:text-[#8B1E1E] border-[#8B1E1E] shadow-md transition-all duration-300"
+							style={{
+								background: 'rgba(0, 0, 0, 0.7)',
+								textShadow: '0 0 3px #8B1E1E',
+							}}
+						>
+							<span className="relative z-10">View the Menu</span>
+							<span
+								className="absolute inset-0 rounded animate-flicker"
+								style={{
+									boxShadow: '0 0 15px #8B1E1E',
+									opacity: 0.2,
+								}}
+							></span>
+						</motion.a>
+					</motion.div>
+
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 2.8, duration: 0.6 }}
+						className="absolute bottom-24"
+					>
+						<a
+							href="#about"
+							className="flex flex-col items-center text-[#71C13F] hover:opacity-80"
+						>
+							<ChevronDown className="w-8 h-8 animate-bounce" />
+							<span className="text-xs uppercase tracking-widest mt-1">
+								Scroll
 							</span>
-						</h1>
-						<h1 className="text-[#F0F7EE] text-3xl font-bold uppercase tracking-wide lg:tracking-[.1em] edrop-shadow pt-8 md:text-5xl lg:text-8xl">
-							Saloon
-						</h1>
-					</motion.div>
-					<motion.div
-						initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
-						animate={{
-							clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-						}}
-						transition={{ delay: 0.7, duration: 0.7, ease: 'linear' }}
-						className=" flex flex-col justify-center items-center pt-12"
-					>
-						<h1 className="text-[#F0F7EE] text-3xl font-bold uppercase tracking-[.1em] lg:tracking-[.1em] drop-shadow md:text-5xl lg:text-8xl">
-							Featuring
-						</h1>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ delay: 1.7, duration: 0.7, ease: 'linear' }}
-						className=" flex flex-col justify-center items-center pt-12"
-					>
-						<h1 className="text-[#F0F7EE] text-3xl font-bold uppercase tracking-wide lg:tracking-[.1em] drop-shadow md:text-5xl lg:text-8xl">
-							The City{' '}
-							<span className="font-zomboi text-[#E71D36]">Morgue</span>
-						</h1>
-						<h1 className="text-[#F0F7EE] text-3xl font-bold uppercase tracking-[.1em] lg:tracking-[.1em] edrop-shadow pt-8 md:text-5xl lg:text-8xl">
-							Kitchen
-						</h1>
+						</a>
 					</motion.div>
 				</div>
 			</div>
