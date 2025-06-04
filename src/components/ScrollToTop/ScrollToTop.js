@@ -8,7 +8,7 @@ const ScrollToTop = () => {
 		if (location.pathname === '/menu' || location.pathname === '/') {
 			window.scrollTo({ top: 0, behavior: 'smooth' });
 		}
-	}, [location.key]);
+	}, [location.key, location.pathname]);
 
 	return null;
 };
