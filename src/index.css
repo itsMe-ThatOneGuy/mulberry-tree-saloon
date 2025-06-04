@@ -64,6 +64,45 @@
         animation: flicker 2s infinite;
     }
 
+    @keyframes pulseFlicker {
+
+        0%,
+        100% {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+            filter: drop-shadow(0 0 5px #E71D36);
+        }
+
+        15% {
+            opacity: 0.7;
+            transform: scale(1.02) rotate(-0.5deg);
+        }
+
+        30% {
+            opacity: 1;
+            transform: scale(1) rotate(0.5deg);
+        }
+
+        45% {
+            opacity: 0.85;
+            transform: scale(1.01) rotate(-0.3deg);
+        }
+
+        60% {
+            opacity: 1;
+            transform: scale(1.03);
+        }
+
+        75% {
+            opacity: 0.9;
+            transform: scale(1);
+        }
+    }
+
+    .animate-pulse-flicker {
+        animation: pulseFlicker 2.5s ease-in-out infinite;
+    }
+
     @keyframes slowPulse {
 
         0%,
