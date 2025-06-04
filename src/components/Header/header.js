@@ -1,23 +1,23 @@
 import { Menu, X } from 'react-feather';
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const NAV_LINKS = [
 	{
 		label: 'About',
-		href: '#about',
+		to: '/#about',
 		font: 'font-liquidism2',
 		decoration: '#47A025',
 	},
 	{
 		label: 'Menu',
-		href: 'https://qrfy.io/p/sBtOePJwpc?utm_source=qrcode&utm_medium=images&utm_campaign=35903903',
-		external: true,
+		to: '/menu',
 		font: 'font-zomboi',
 		decoration: '#E71D36',
 	},
 	{
 		label: 'Info',
-		href: '#info',
+		to: '/#info',
 		font: 'font-liquidism2',
 		decoration: '#47A025',
 	},
@@ -62,6 +62,17 @@ const Header = () => {
 		setMobileMenu((prev) => !prev);
 	};
 
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.hash) {
+			const element = document.querySelector(location.hash);
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	}, [location.hash]);
+
 	return (
 		<header
 			className={`fixed top-0 left-0 z-50 w-full transition-transform duration-300 shadow-lg shadow-[#3b0764]/30 ${
@@ -73,24 +84,22 @@ const Header = () => {
 					isSticky ? 'shadow-md' : ''
 				}`}
 			>
-				<a
+				<Link
 					className="font-liquidism2 text-3xl font-medium tracking-widest text-[#F0F7EE] hover:text-[#47A025] transition-all ease-in-out duration-300 z-50"
-					href="#top"
+					to="/#top"
 				>
 					M<span className="font-liquidism text-[#47A025]">T</span>S
-				</a>
+				</Link>
 
 				<nav className="hidden sm:flex space-x-7">
-					{NAV_LINKS.map(({ label, href, font, external }) => (
-						<a
+					{NAV_LINKS.map(({ label, to, font }) => (
+						<Link
 							key={label}
-							href={href}
-							target={external ? '_blank' : undefined}
-							rel={external ? 'noopener noreferrer' : undefined}
+							to={to}
 							className={`${font} text-3xl tracking-widest text-[#F0F7EE] font-medium uppercase cursor-pointer transition-all ease-in-out duration-300 hover:text-[#47A025]`}
 						>
 							{label}
-						</a>
+						</Link>
 					))}
 				</nav>
 
@@ -118,17 +127,15 @@ const Header = () => {
 							: 'opacity-0 -translate-y-8'
 					}`}
 				>
-					{NAV_LINKS.map(({ label, href, external, font, decoration }) => (
+					{NAV_LINKS.map(({ label, to, font, decoration }) => (
 						<li key={label}>
-							<a
-								href={href}
-								target={external ? '_blank' : undefined}
-								rel={external ? 'noopener noreferrer' : undefined}
+							<Link
+								to={to}
 								onClick={toggleMobileMenu}
 								className={`${font} tracking-widest underline underline-offset-8 decoration-[${decoration}] hover:text-[#47A025] transition-all duration-300 drop-shadow-md`}
 							>
 								{label}
-							</a>
+							</Link>
 						</li>
 					))}
 				</ul>
