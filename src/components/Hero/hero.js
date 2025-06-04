@@ -55,7 +55,7 @@ const Hero = () => {
 							showFlicker ? 'animate-flicker' : ''
 						}`}
 					>
-						The City Morgue Kitchen
+						The City Morgue Restaurant
 					</motion.h3>
 
 					<motion.div
