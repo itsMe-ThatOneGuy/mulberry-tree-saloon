@@ -90,10 +90,10 @@ const Info = () => (
 							<Phone className="text-[#71C13F] mx-auto mb-1" size={24} />
 							<p className="text-[#C86368] uppercase font-semibold">Phone</p>
 							<a
-								href="tel:4173669857"
+								href="tel:4172422034"
 								className="hover:underline decoration-[#71C13F]"
 							>
-								(417) 366-9857
+								(417) 242-2034
 							</a>
 						</div>
 
@@ -119,14 +119,44 @@ const Info = () => (
 							</div>
 
 							<p className="pb-2 font-liquidism2 tracking-wider text-[#F0F7EE]">
-								The City Morgue Kitchen
+								The City Morgue Restaurant
 							</p>
-							<div className="flex justify-between text-sm md:text-base border-b border-[#71C13F]/40 pb-2">
-								<p className="font-medium">
-									Tues - <span className="text-[#C86368]">Sat</span>
-								</p>
-								<p className="tracking-wide">11:00 AM - 11:00 PM</p>
+
+							<div className="space-y-2 text-sm md:text-base">
+								{[
+									{
+										day: 'Sun',
+										hours: '11:00 AM - 7:00 PM',
+										color: '#C86368',
+									},
+									{ day: 'Mon', hours: 'CLOSED', closed: true },
+									{ day: 'Tues', hours: '11:00 AM - 11:00 PM' },
+									{ day: 'Wed', hours: '11:00 AM - 11:00 PM' },
+									{ day: 'Thurs', hours: '11:00 AM - 11:00 PM' },
+									{ day: 'Fri', hours: '11:00 AM - 11:00 PM' },
+									{
+										day: 'Sat',
+										hours: '11:00 AM - 11:00 PM',
+										color: '#C86368',
+									},
+								].map(({ day, hours, color, closed }) => (
+									<div key={day} className="flex justify-between">
+										<p
+											className={`font-medium ${color ? `text-[${color}]` : ''}`}
+										>
+											{day}
+										</p>
+										<p
+											className={`tracking-wide ${
+												closed ? 'font-liquidism2 text-[#8B1E1E]' : ''
+											}`}
+										>
+											{hours}
+										</p>
+									</div>
+								))}
 							</div>
+							<div className="flex justify-between text-sm md:text-base border-b border-[#71C13F]/40 pb-2"></div>
 
 							<p className="pt-4 tracking-wider text-[#F0F7EE]">
 								Mulberry Tree Saloon
@@ -135,13 +165,13 @@ const Info = () => (
 								{[
 									{
 										day: 'Sun',
-										hours: '11:00 AM - 8:00 PM',
+										hours: '11:00 AM - 12:00 AM',
 										color: '#C86368',
 									},
 									{ day: 'Mon', hours: 'CLOSED', closed: true },
-									{ day: 'Tues', hours: '11:00 AM - 12:00 AM' },
-									{ day: 'Wed', hours: '11:00 AM - 12:00 AM' },
-									{ day: 'Thurs', hours: '11:00 AM - 12:00 AM' },
+									{ day: 'Tues', hours: '11:00 AM - 1:30 AM' },
+									{ day: 'Wed', hours: '11:00 AM - 1:30 AM' },
+									{ day: 'Thurs', hours: '11:00 AM - 1:30 AM' },
 									{ day: 'Fri', hours: '11:00 AM - 1:30 AM' },
 									{
 										day: 'Sat',

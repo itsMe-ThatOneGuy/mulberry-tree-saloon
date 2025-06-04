@@ -28,7 +28,7 @@ const ScrollToTopBtn = () => {
 			animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
 			transition={{ duration: 0.3 }}
 			onClick={scrollToTop}
-			className="fixed bottom-6 right-6 z-50 p-3 bg-[#47A025] text-white rounded-full shadow-lg hover:bg-[#58b836] transition-all"
+			className="fixed bottom-16 right-6 z-50 p-3 bg-[#47A025] text-white rounded-full shadow-lg hover:bg-[#58b836] transition-all"
 			aria-label="Scroll to top"
 		>
 			<ArrowUp />
