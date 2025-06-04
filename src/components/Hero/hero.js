@@ -3,6 +3,7 @@ import outsideMobile from '../../images/outside-mobile.jpg';
 import outside from '../../images/outside.jpg';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -18,16 +19,15 @@ const Hero = () => {
 		return `url("${windowWidth < 768 ? outsideMobile : outside}")`;
 	};
 
+	const MotionLink = motion(Link);
+
 	return (
-		<section
-			className="relative flex items-center sm:pt-16 min-h-screen z-30"
-			id="top"
-		>
+		<section className="h-screen flex items-center relative z-30" id="top">
 			<div
 				className="w-full h-full bg-cover shadow-inner"
 				style={{ backgroundImage: getBackgroundImage() }}
 			>
-				<div className="hero-overlay bg-black text-[#F0F7EE] bg-opacity-60 min-h-screen flex flex-col justify-center items-center px-4 text-center shadow-inner relative overflow-hidden">
+				<div className="h-full w-full bg-black bg-opacity-60 text-[#F0F7EE] flex flex-col justify-center items-center px-4 text-center shadow-inner relative overflow-hidden">
 					<motion.h1
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -64,10 +64,8 @@ const Hero = () => {
 						transition={{ delay: 2.2, duration: 0.6 }}
 						className="pt-10"
 					>
-						<motion.a
-							href="https://qrfy.io/p/sBtOePJwpc?utm_source=qrcode&utm_medium=images&utm_campaign=35903903"
-							target={'_blank'}
-							rel={'noopener noreferrer'}
+						<MotionLink
+							to="/menu"
 							whileHover={{
 								scale: 1.05,
 								boxShadow: '0 0 20px rgba(139, 30, 30, 0.8)',
@@ -87,7 +85,7 @@ const Hero = () => {
 									opacity: 0.2,
 								}}
 							></span>
-						</motion.a>
+						</MotionLink>
 					</motion.div>
 
 					<motion.div
