@@ -1,8 +1,8 @@
 import Layout from './components/Layout/layout';
-import Menu from './components/Menu/menu';
+import Menu from './pages/Menu';
 import Home from './pages/Home';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-import ScrollToTopBtn from './components/ScrollToTopBtn/scrolltotopbtn';
+import NotFound from './components/NotFound/notfound';
 
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
@@ -20,6 +20,14 @@ function App() {
 			<ScrollToTop />
 			<Routes>
 				<Route
+					path="/*"
+					element={
+						<Layout>
+							<NotFound />
+						</Layout>
+					}
+				/>
+				<Route
 					path="/"
 					element={
 						<Layout>
@@ -32,7 +40,6 @@ function App() {
 					element={
 						<Layout>
 							<Menu />
-							<ScrollToTopBtn />
 						</Layout>
 					}
 				/>
