@@ -12,6 +12,14 @@ const RestaurantMenu = () => {
 		menuData.find((section) => section.category === selectedCategory)?.items ||
 		[];
 
+	const activeBottomTop =
+		menuData.find((section) => section.category === selectedCategory)?.top ||
+		[];
+
+	const activeBottomTxt =
+		menuData.find((section) => section.category === selectedCategory)?.bottom ||
+		[];
+
 	return (
 		<section
 			id="menu"
@@ -58,10 +66,12 @@ const RestaurantMenu = () => {
 					viewport={{ once: true }}
 					className="space-y-6 sm:px-4"
 				>
+					<h3 className="flex justify-center pt-5 tracking-wide">
+						{activeBottomTop}
+					</h3>
 					{activeItems.map((item, i) => (
 						<li key={i} className="text-white border-b border-[#47A025] pb-6">
 							<div className="flex justify-between items-start gap-4">
-								{/* Name + Description block */}
 								<div className="flex-1">
 									<div className="flex justify-between items-baseline">
 										<h3 className="text-xl tracking-wide font-liquidism2 text-[#8B1E1E] mb-1">
@@ -79,6 +89,10 @@ const RestaurantMenu = () => {
 						</li>
 					))}
 				</motion.ul>
+
+				<h3 className="flex justify-center pt-5 tracking-wide">
+					{activeBottomTxt}
+				</h3>
 
 				<p className="pt-10 text-sm text-center text-[#E71D36] italic">
 					⚠ *Consuming raw or undercooked foods may increase your risk of
