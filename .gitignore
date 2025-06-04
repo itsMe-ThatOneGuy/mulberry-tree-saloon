@@ -1,5 +1,6 @@
 /src/images
 /src/fonts
+/src/data
 
 # dependencies
 /node_modules
