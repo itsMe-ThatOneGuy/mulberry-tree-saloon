@@ -1,0 +1,118 @@
+---
+import "../styles/global.css";
+import { business } from "../data/business";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title = "Mulberry Tree Saloon | Bar, Restaurant & Live Music",
+    description = "The Mulberry Tree Saloon is a zombie-themed bar, restaurant, and live music venue offering great food, drinks, and live entertainment.",
+} = Astro.props;
+
+const canonicalURL = Astro.url.href;
+
+const socialImageURL = new URL(
+    `${import.meta.env.BASE_URL}social-preview.jpg`,
+    Astro.site,
+).href;
+
+const businessSchema = {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    name: business.name,
+    description: description,
+    url: canonicalURL,
+    image: socialImageURL,
+    email: business.email,
+    telephone: business.telephone,
+    priceRange: "$$",
+
+    address: {
+        "@type": "PostalAddress",
+        streetAddress: business.address.streetAddress,
+        addressLocality: business.address.addressLocality,
+        addressRegion: business.address.addressRegion,
+        postalCode: business.address.postalCode,
+        addressCountry: business.address.addressCountry,
+    },
+
+    openingHoursSpecification: business.openingHoursSpecification,
+
+    sameAs: [business.facebook, business.instagram],
+};
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+
+        <link rel="canonical" href={canonicalURL} />
+
+        <link
+            rel="shortcut icon"
+            href={`${import.meta.env.BASE_URL}favicon.ico`}
+        />
+        <link
+            rel="icon"
+            href={`${import.meta.env.BASE_URL}favicon.svg`}
+            type="image/svg+xml"
+        />
+        <link
+            rel="icon"
+            href={`${import.meta.env.BASE_URL}favicon-96x96.png`}
+            type="image/png"
+            sizes="96x96"
+        />
+        <link
+            rel="apple-touch-icon"
+            href={`${import.meta.env.BASE_URL}apple-touch-icon.png`}
+            sizes="180x180"
+        />
+        <link
+            rel="manifest"
+            href={`${import.meta.env.BASE_URL}site.webmanifest`}
+        />
+
+        <meta name="theme-color" content="#000000" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:image" content={socialImageURL} />
+        <meta property="og:image:alt" content="The Mulberry Tree Saloon" />
+        <meta property="og:site_name" content="The Mulberry Tree Saloon" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={socialImageURL} />
+        <meta name="twitter:image:alt" content="The Mulberry Tree Saloon" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://awards.infcdn.net/2024/badge-circledLeaves27.css"
+            rel="stylesheet"
+        />
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify(businessSchema)}
+        />
+    </head>
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+    </body>
+</html>
