@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Noise from "../images/info-bg-green.png";
+---
+
+<Layout>
+    <section
+        class="min-h-screen flex items-center justify-center bg-[#1E1E1E]/90 bg-blend-overlay"
+        style={{ backgroundImage: `url("${Noise.src}")` }}
+    >
+        <div class="text-center px-6">
+            <h1
+                class="text-9xl font-liquidism2 text-[#E71D36] drop-shadow mb-6"
+            >
+                404
+            </h1>
+            <h2
+                class="text-5xl text-[#F0F7EE] tracking-widest drop-shadow mb-8"
+            >
+                Body Not Found
+            </h2>
+
+            <a href="/">
+                <button
+                    class="px-6 py-3 rounded-full bg-[#47A025] text-white font-semibold hover:bg-[#5bc030] transition-all animate-wigglePulse"
+                >
+                    Return to The Living
+                </button>
+            </a>
+        </div>
+    </section>
+</Layout>

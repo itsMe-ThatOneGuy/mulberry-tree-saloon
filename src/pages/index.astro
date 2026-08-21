@@ -1,0 +1,30 @@
+---
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Carousel from "../components/Carousel.astro";
+import Info from "../components/Info.astro";
+import Layout from "../layouts/Layout.astro";
+
+import gallery1 from "../images/gallery-1.jpg";
+import gallery2 from "../images/gallery-2.jpg";
+import gallery3 from "../images/gallery-3.jpg";
+import gallery4 from "../images/gallery-4.jpg";
+import gallery5 from "../images/gallery-5.jpg";
+import gallery6 from "../images/gallery-6.jpg";
+
+const galleryImages = [
+    { src: gallery1.src, alt: "food" },
+    { src: gallery2.src, alt: "food" },
+    { src: gallery3.src, alt: "food" },
+    { src: gallery4.src, alt: "food" },
+    { src: gallery5.src, alt: "food" },
+    { src: gallery6.src, alt: "food" },
+];
+---
+
+<Layout>
+    <Hero />
+    <About />
+    <Carousel images={galleryImages} interval={4000} />
+    <Info />
+</Layout>
