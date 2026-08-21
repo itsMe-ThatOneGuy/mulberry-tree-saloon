@@ -16,7 +16,7 @@ const {
 
 const canonicalURL = Astro.url.href;
 
-const socialImageURL = `/mulberry-tree-saloon/social-preview.jpg`;
+const socialImageURL = `/social-preview.jpg`;
 
 const businessSchema = {
     "@context": "https://schema.org",
@@ -55,21 +55,17 @@ const businessSchema = {
 
         <link rel="canonical" href={canonicalURL} />
 
-        <link rel="shortcut icon" href="/mulberry-tree-saloon/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link
             rel="icon"
-            href="/mulberry-tree-saloon/favicon.svg"
-            type="image/svg+xml"
-        />
-        <link
-            rel="icon"
-            href="/mulberry-tree-saloon/favicon-96x96.png"
+            href="/favicon-96x96.png"
             type="image/png"
             sizes="96x96"
         />
         <link
             rel="apple-touch-icon"
-            href="/mulberry-tree-saloon/apple-touch-icon.png"
+            href="/apple-touch-icon.png"
             sizes="180x180"
         />
 
