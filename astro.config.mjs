@@ -3,9 +3,14 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
-// https://astro.build/config
+import icon from 'astro-icon';
+
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
-  }
+	site: 'https://itsMe-ThatOneGuy.github.io',
+	base: '/mulberry-tree-saloon',
+	vite: {
+		plugins: [tailwindcss()],
+	},
+
+	integrations: [icon()],
 });
