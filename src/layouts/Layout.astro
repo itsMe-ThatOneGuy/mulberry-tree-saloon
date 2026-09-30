@@ -4,13 +4,8 @@ import { business } from "../data/business";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-interface Props {
-    title?: string;
-    description?: string;
-}
-
 const {
-    title = "Mulberry Tree Saloon | Bar, Restaurant & Live Music",
+    title = "Mulberry Tree Saloon / City Morgue | Bar, Restaurant & Live Music",
     description = "The Mulberry Tree Saloon is a zombie-themed bar, restaurant, and live music venue offering great food, drinks, and live entertainment.",
 } = Astro.props;
 
@@ -21,7 +16,7 @@ const socialImageURL = `/social-preview.jpg`;
 const businessSchema = {
     "@context": "https://schema.org",
     "@type": "BarOrPub",
-    name: business.name,
+    name: "The Mulberry Tree Saloon / City Morgue",
     description: description,
     url: canonicalURL,
     image: socialImageURL,
