@@ -9,16 +9,26 @@ const {
     description = "The Mulberry Tree Saloon is a zombie-themed bar, restaurant, and live music venue offering great food, drinks, and live entertainment.",
 } = Astro.props;
 
-const canonicalURL = Astro.url.href;
+const siteURL = "https://themulberrytreesaloon.com";
+const canonicalURL = new URL(Astro.url.pathname, siteURL).href;
 
-const socialImageURL = `/social-preview.jpg`;
+const socialImageURL = `${siteURL}/social-preview.jpg`;
+
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "The Mulberry Tree Saloon / City Morgue",
+    alternateName: "Mulberry Tree Saloon",
+    url: `${siteURL}/`,
+};
 
 const businessSchema = {
     "@context": "https://schema.org",
     "@type": "BarOrPub",
     name: "The Mulberry Tree Saloon / City Morgue",
+    alternateName: "Mulberry Tree Saloon",
     description: description,
-    url: canonicalURL,
+    url: `${siteURL}/`,
     image: socialImageURL,
     email: business.email,
     telephone: business.telephone,
@@ -44,6 +54,7 @@ const businessSchema = {
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="robots" content="index, follow" />
@@ -85,6 +96,10 @@ const businessSchema = {
         <link
             href="https://awards.infcdn.net/2024/badge-circledLeaves27.css"
             rel="stylesheet"
+        />
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify(websiteSchema)}
         />
         <script
             type="application/ld+json"
